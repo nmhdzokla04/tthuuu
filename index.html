@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title id="pageTitle">kimanhiudau 💗</title>
+<style>
+*{box-sizing:border-box}html,body{margin:0;background:#000;color:#fff;font-family:Arial,sans-serif;scroll-behavior:smooth}
+body{overflow-x:hidden}#space{position:fixed;inset:0;z-index:-3;background:#000}
+.star{position:absolute;border-radius:50%;background:#fff;box-shadow:0 0 8px #fff;animation:tw var(--d) infinite alternate}
+@keyframes tw{to{opacity:1;transform:scale(1.7)}}nav{position:fixed;z-index:20;top:0;width:100%;height:68px;padding:0 5%;display:flex;justify-content:space-between;align-items:center;background:#0009;backdrop-filter:blur(5px)}
+nav a{color:#fff;text-decoration:none;margin:0 15px;text-shadow:0 0 10px #ff4bc9}.brand{color:#ff9be4;text-shadow:0 0 15px #ff39bd;font-weight:bold}.sound{font-size:22px;cursor:pointer}
+.hero{height:100vh;position:relative;overflow:hidden}.moon{position:absolute;left:50%;top:21%;transform:translateX(-50%);width:170px;height:170px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#fff3a8,#ffd052 35%,#ff9322 72%,#e75c10);box-shadow:0 0 35px #ffbe52,0 0 100px #ff812b88;animation:moon 5s ease-in-out infinite alternate}.moon:before{content:"🐰";position:absolute;top:-48px;left:59px;font-size:45px;filter:drop-shadow(0 0 8px #fff)}
+@keyframes moon{to{transform:translateX(-50%) translateY(-16px) scale(1.04)}}
+.lantern{position:absolute;width:62px;height:82px;border-radius:48%;background:radial-gradient(circle,#fff19b,#ffad20 30%,#ff5519 70%,#bd260c);box-shadow:0 0 20px #ff7925,0 0 55px #ff5b174d;animation:lan 5s ease-in-out infinite alternate}.lantern:before{content:"";position:absolute;left:50%;top:-22px;height:23px;border-left:2px solid #dbb476}.l1{left:10%;top:22%}.l2{right:12%;top:17%;animation-delay:-2s}.l3{left:26%;bottom:12%;transform:scale(.7)}.l4{right:27%;bottom:10%;transform:scale(.55);animation-delay:-3s}@keyframes lan{to{translate:15px -22px;rotate:5deg}}
+.neon{position:absolute;color:#ff8add;font-weight:800;white-space:nowrap;text-shadow:0 0 7px #ff4bc9,0 0 22px #ff1eac;animation:drift var(--t) ease-in-out infinite alternate}.n1{left:6%;top:18%;font-size:28px;--t:7s}.n2{right:7%;top:26%;font-size:24px;--t:8s}.n3{left:9%;bottom:25%;font-size:23px;--t:9s}.n4{right:8%;bottom:30%;font-size:24px;--t:7s}.n5{left:50%;top:53%;transform:translateX(-50%);font-size:28px;--t:6s}@keyframes drift{to{translate:25px -25px;rotate:3deg}}
+.photo,.card{position:absolute;padding:8px;background:#eee1da;border-radius:6px;box-shadow:0 10px 35px #ff57c744,0 0 25px #ff78dd44;will-change:transform}.photo{width:180px;height:235px;animation:float var(--p) ease-in-out infinite alternate}.photo img,.card img{width:100%;height:100%;object-fit:cover;border-radius:2px}.p1{left:7%;top:34%;transform:rotate(-8deg);--p:6.5s}.p2{right:8%;top:41%;transform:rotate(8deg) scale(.85);--p:8s}.p3{left:35%;bottom:10%;transform:rotate(5deg) scale(.72);--p:7s}.p4{right:31%;top:29%;transform:rotate(-5deg) scale(.58);--p:9s}@keyframes float{to{translate:25px -35px;rotate:10deg}}
+.card{width:105px;height:140px;animation:card 11s linear infinite}.c1{left:23%;top:15%;rotate:13deg}.c2{right:23%;top:14%;rotate:-13deg;animation-delay:-5s}.c3{right:17%;bottom:14%;rotate:10deg;animation-delay:-8s}@keyframes card{50%{translate:35px -55px;rotate:22deg}100%{translate:-25px -100px;rotate:-12deg}}
+.section{min-height:100vh;padding:110px 8%;display:flex;align-items:center;justify-content:center;text-align:center}.box{max-width:850px;padding:40px;border:1px solid #ff72d766;border-radius:28px;background:#ff40bd09;box-shadow:0 0 45px #ff39bd22;backdrop-filter:blur(5px)}h2{color:#ff9be4;text-shadow:0 0 15px #ff39bd;font-size:36px}.box p{font-size:19px;line-height:1.9;color:#ffe8f8}.start{position:fixed;inset:0;z-index:100;background:#000;display:flex;align-items:center;justify-content:center;transition:.8s}.start button{border:1px solid #ff79d8;background:#ff45bd12;color:#ffc3ed;padding:15px 28px;border-radius:999px;font-size:18px;box-shadow:0 0 25px #ff3abd;cursor:pointer}.hidden{opacity:0;pointer-events:none}.scroll{position:absolute;bottom:18px;left:50%;transform:translateX(-50%);color:#ffb4e9aa;font-size:12px}
+@media(max-width:700px){nav a{display:none}.photo{width:120px;height:160px}.card{width:70px;height:95px}.moon{width:120px;height:120px}.moon:before{left:42px;font-size:34px}.neon{font-size:15px!important}}
+</style></head><body>
+<div id="space"></div>
+<nav><div class="brand" id="brand"></div><div><a href="#home">Trang chủ</a><a href="#wish">Lời chúc</a><a href="#memory">Kỷ niệm</a></div><div id="sound" class="sound" onclick="toggleMusic()">🔇</div></nav>
+<section class="hero" id="home">
+<div class="moon"></div><div class="lantern l1"></div><div class="lantern l2"></div><div class="lantern l3"></div><div class="lantern l4"></div>
+<div class="neon n1" id="text1"></div><div class="neon n2" id="text2"></div><div class="neon n3" id="text3"></div><div class="neon n4" id="text4"></div><div class="neon n5" id="text5"></div>
+<div class="photo p1"><img id="photo1"></div><div class="photo p2"><img id="photo2"></div><div class="photo p3"><img id="photo3"></div><div class="photo p4"><img id="photo4"></div>
+<div class="card c1"><img id="photo5"></div><div class="card c2"><img id="photo6"></div><div class="card c3"><img id="photo7"></div><div class="scroll">⌄ Cuộn xuống</div>
+</section>
+<section class="section" id="wish"><div class="box"><h2 id="wishTitle"></h2><p id="wish1"></p><p id="wish2"></p><p id="wish3" style="font-size:28px;color:#ff9be4"></p></div></section>
+<section class="section" id="memory"><div class="box"><h2 id="memoryTitle"></h2><p id="memoryText"></p></div></section>
+<div class="start" id="start"><button onclick="enter()">💗 Mở thư Trung Thu 💗</button></div>
+
+<div id="editHelp" style="position:fixed;left:12px;bottom:12px;z-index:30;color:#ffd4f2aa;font-size:11px;max-width:360px">Muốn tự đổi: mở <b>config.js</b> để sửa chữ; thay ảnh trong <b>assets</b>; thêm <b>assets/music.mp3</b> để dùng nhạc riêng.</div>
+<script src="config.js"></script>
+<script>
+const C=window.SITE_CONFIG;
+document.getElementById("pageTitle").textContent=C.title;
+document.getElementById("brand").textContent=C.brand;
+[1,2,3,4,5].forEach(i=>document.getElementById("text"+i).textContent=C.texts[i-1]);
+[1,2,3,4,5,6,7].forEach(i=>document.getElementById("photo"+i).src=C.photos[i-1]);
+document.getElementById("wishTitle").textContent=C.wish.title;document.getElementById("wish1").textContent=C.wish.p1;document.getElementById("wish2").textContent=C.wish.p2;document.getElementById("wish3").textContent=C.wish.p3;document.getElementById("memoryTitle").textContent=C.memory.title;document.getElementById("memoryText").textContent=C.memory.text;
+for(let i=0;i<150;i++){let s=document.createElement('i');s.className='star';let z=Math.random()*3+1;s.style.width=s.style.height=z+'px';s.style.left=Math.random()*100+'%';s.style.top=Math.random()*100+'%';s.style.opacity=.2+Math.random()*.8;s.style.setProperty('--d',(1.5+Math.random()*3)+'s');document.getElementById('space').appendChild(s)}
+let ctx,timer,playing=false,master;let audio=new Audio();audio.loop=true;audio.volume=.45;
+const notes=[261.63,329.63,392,329.63,293.66,349.23,440,392];
+function synthMusic(){ctx=new(window.AudioContext||window.webkitAudioContext)();master=ctx.createGain();master.gain.value=.025;master.connect(ctx.destination);let i=0;timer=setInterval(()=>{let o=ctx.createOscillator(),g=ctx.createGain();o.type='sine';o.frequency.value=notes[i++%notes.length];g.gain.setValueAtTime(0,ctx.currentTime);g.gain.linearRampToValueAtTime(.5,ctx.currentTime+.03);g.gain.exponentialRampToValueAtTime(.001,ctx.currentTime+.8);o.connect(g);g.connect(master);o.start();o.stop(ctx.currentTime+.85)},650);playing=true;document.getElementById('sound').textContent='🔊'}
+function music(){if(C.music){audio.src=C.music;audio.play().then(()=>{playing=true;document.getElementById('sound').textContent='🔊'}).catch(()=>synthMusic())}else synthMusic()}
+function enter(){document.getElementById('start').classList.add('hidden');music()}
+function toggleMusic(){if(!playing){music();return}if(C.music){audio.pause()}else{clearInterval(timer);if(ctx)ctx.suspend()}playing=false;document.getElementById('sound').textContent='🔇'}
+</script></body></html>
